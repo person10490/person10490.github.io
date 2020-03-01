@@ -266,7 +266,7 @@ for (i=0;i<d.length;i++){
 	e=e+d[i]
 if (counter==0){
 counter+=1;
-e=e+" ";
+e=e+": ";
 }
 else{
 counter-=1;
