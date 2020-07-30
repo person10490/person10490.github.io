@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <title>CNG</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<a onclick="sendMessage();" id="masaobutton">red</a>
+
+
+
+
+  <script>
+function sendMessage() {
+      alert("sending");
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/738190770854690902/lCoZbX_BBtUx9C-SdvOF5brfbrUGtK1hfxdtoosKtfvQOfBRZakb73Dr0eDPlygA20vi");
+      request.setRequestHeader('Content-type', 'application/json');
+      
+      var params = {
+    username: "Masao1",
+    avatar_url: "person10490.github.io/webhook/Capture.JPG",
+    content: "Hello guys and welcome to my channel"
+}
+request.send(JSON.stringify(params));
+alert("sent");
+}
+  </script>
+</body>
+
+</html>

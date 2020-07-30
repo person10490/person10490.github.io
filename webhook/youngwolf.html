@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <title>youngwolf webhook</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+Username:<input id="userbox" type="text"></br>
+Avatar:<input id="avatar" type="text"></br>
+Text:<input id="content" type="text"></br>
+
+<a onclick="sendMessage();" id="masaobutton">send</a>
+  <script>
+function sendMessage() {
+      alert("sending");
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/738011061462106133/qV-swalRyUfBYKHAxrAIhPjCYMvf6qVRAMHdqMhPjuhwO9GnRmqqe910Nm47ZOOekKOS");
+      request.setRequestHeader('Content-type', 'application/json');
+      
+      var params = {
+    username: document.getElementById("userbox").value,
+    avatar_url: document.getElementById("avatar").value,
+    content: document.getElementById("content").value
+}
+request.send(JSON.stringify(params));
+alert("sent");
+}
+  </script>
+</body>
+
+</html>
