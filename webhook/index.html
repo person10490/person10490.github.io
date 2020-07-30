@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<input id="content" type="text"></br>
 <a onclick="sendMessage();" id="masaobutton">red</a>
 
 
@@ -19,9 +20,9 @@ function sendMessage() {
       request.setRequestHeader('Content-type', 'application/json');
       
       var params = {
-    username: "Masao1",
-    avatar_url: "person10490.github.io/webhook/Capture.JPG",
-    content: "Hello guys and welcome to my channel"
+    username: "Masao",
+    avatar_url: "https://cdn.discordapp.com/attachments/713901089568849923/738198301186326528/SPOILER_Capture.JPG",
+    content: document.getElementById("content").value
 }
 request.send(JSON.stringify(params));
 alert("sent");
