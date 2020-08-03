@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <title>Pretend to be Yves</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<input id="content" type="text"></br>
+<a onclick="sendMessage();" id="masaobutton">red</a>
+
+
+
+
+  <script>
+function sendMessage() {
+    
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/738219301307416677/gOuYE2v3a6pazWmWzz_TWuYYh2HNIm4rWt6s2KoHYKO_m4nGHCOyRLaYjJRvt6UnxYxF");
+      request.setRequestHeader('Content-type', 'application/json');
+      
+      var params = {
+    username: "Yves",
+    avatar_url: "https://cdn.discordapp.com/attachments/713901089568849923/739815074100805702/unknown.png",
+    content: document.getElementById("content").value
+}
+request.send(JSON.stringify(params));
+
+}
+  </script>
+</body>
+
+</html>
