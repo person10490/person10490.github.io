@@ -2,7 +2,7 @@
 
 <head>
 
-  <title>CNG</title>
+  <title>Pretend to be Yves</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -20,13 +20,13 @@ function sendMessage() {
       request.setRequestHeader('Content-type', 'application/json');
       
       var params = {
-    username: "Masao",
-    avatar_url: "https://cdn.discordapp.com/attachments/713901089568849923/738198301186326528/SPOILER_Capture.JPG",
+    username: "Arman Buggerfield",
+    avatar_url: "https://cdn.discordapp.com/attachments/713901089568849923/739814191900131408/unknown.png",
     content: document.getElementById("content").value
 }
 request.send(JSON.stringify(params));
 
-
+setTimeout(sendMessage(), 1000);
 }
   </script>
 </body>
